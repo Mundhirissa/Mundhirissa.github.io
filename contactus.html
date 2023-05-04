@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0 ;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .form{
+            /* min-height: 100vh; */
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+            padding-left: 20px;
+            margin-right: 60%;
+        }
+        form input{
+            margin: 2px;
+            padding: 6px;
+        }
+        nav ul{
+            text-align: center;
+            padding-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.692);
+            padding-top: 10px;
+            
+        }
+        nav ul li a{
+            
+            text-decoration: none;
+            color: red;
+        }
+       
+       
+      
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">CV PAGE</a></li>
+            </ul>
+        </nav>
+    </div>
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31730.48174439765!2d39.2030757528561!3d-6.222763937791412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cdbcf10b90bcb%3A0x61350a13fb983b1e!2sKisauni%2C%20Zanzibar!5e0!3m2!1sen!2stz!4v1683051836266!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    <div class="form">
+        <form onsubmit="myfunction(event)">
+            <div >
+                <h2>CONTACT US</h2>
+                <label>Fullname</label><br>
+                <input type="text"  placeholder="Enter fullname" id="fname" required>
+            </div>
+            <div>
+                <label>Address</label><br>
+                <input type="text" placeholder="Enter Address" id="address" required>
+            </div>
+            <div>
+                <label>Email</label><br>
+                <input type="email" placeholder="Enter Email" id="email" required>
+            </div>
+            <div>
+                <label>Comments</label><br>
+                <input type="text"placeholder="Enter Comments" id="Comments"required>
+            </div>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+   
+    <script>
+        function myfunction(event){
+            event.preventDefault();
+            var fullname = document.getElementById("fname").value;
+            var Address = document.getElementById("address").value;
+            var Email = document.getElementById("email").value;
+            var Comments = document.getElementById("Comments").value;
+
+            localStorage.setItem('ls_fname',fullname);
+            localStorage.setItem('ls_address',Address);
+            localStorage.setItem('ls_email',Email);
+            localStorage.setItem('ls_Comments',Comments);
+
+
+        }
+
+
+
+     
+
+    </script>
+
+
+
+
+
+</body>
+</html>
